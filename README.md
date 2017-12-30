@@ -16,6 +16,7 @@ Thanks to GitHub and friendly developers, there are updated drivers. Personally,
 ```
 https://github.com/lwfinger/rtlwifi_new
 ```
+According to the developer, the ```kernel_version``` branch is newer.
 
 #### The dependencies
 - latest or at least modern Linux kernel, e.g. version 4.13, 4.14 or later
