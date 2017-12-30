@@ -35,9 +35,24 @@ For my purpose, I use a Ubuntu Linux system or Linux Mint system with ```apt``` 
 ```
 sudo apt-get install linux-headers-generic build-essential git --yes
 
-git clone https://github.com/lwfinger/rtlwifi_new.git \
+git clone https://github.com/lwfinger/rtlwifi_new.git 
+--branch kernel_version \
 && pushd rtlwifi_new \
+&& make clean
 && sudo make install \
 && sudo modprobe -r "rtlXXXXxx" \
-sudo modprobe "rtlXXXXxx"
+&& sudo modprobe "rtlXXXXxx" \
+&& popd
+```
+
+#### The example
+I show you the installation instructions for one device, Realtek RTL8821ae:
+```
+pushd ~/ \
+&& sudo apt-get install linux-headers-generic build-essential git --yes \
+&& git clone https://github.com/lwfinger/rtlwifi_new.git --branch kernel_version \
+&& pushd rtlwifi_new \
+&& make clean && sudo make install \
+&& sudo modprobe -r "rtlXXXXxx" && sudo modprobe "rtlXXXXxx" \
+&& popd && popd
 ```
