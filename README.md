@@ -49,11 +49,13 @@ git clone https://github.com/lwfinger/rtlwifi_new.git
 #### The example
 I show you the installation instructions for one device, Realtek RTL8821ae:
 ```
-pushd ~/ \
+&& pushd /opt/ \
 && sudo apt-get install linux-headers-generic build-essential git --yes \
-&& git clone https://github.com/lwfinger/rtlwifi_new.git --branch kernel_version \
+&& sudo git clone https://github.com/lwfinger/rtlwifi_new.git --branch kernel_version \
+&& sudo chmod -R 777 rtlwifi_new \
 && pushd rtlwifi_new \
 && make clean && sudo make install \
-&& sudo modprobe -r "rtlXXXXxx" && sudo modprobe "rtlXXXXxx" \
-&& popd && popd
+&& sudo modprobe -r rtl8821ae && sudo modprobe rtl8821ae \
+&& popd \
+&& popd
 ```
