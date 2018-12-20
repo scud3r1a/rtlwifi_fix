@@ -2,8 +2,9 @@
 
 #### The problem
 On certain Wi-Fi modules (mostly included in notebooks and laptops), 
-the Wi-Fi does not work, the connection gets lost after some time or the connection rate drops from time to time.
-Those Wi-Fi drivers are made from Realtek and they make some problems under Linux distributions.
+the Wi-Fi does not work immediately, 
+the connection gets lost after some time or the connection rate drops from time to time.
+Those Wi-Fi drivers are made by Realtek and they make some problems under Linux distributions.
 
 #### The Wi-Fi device
 To find your Wi-Fi device, under Linux, just execute the following:
@@ -49,7 +50,7 @@ git clone https://github.com/lwfinger/rtlwifi_new.git
 #### The example
 I show you the installation instructions for one device, Realtek RTL8821ae:
 ```
-&& pushd /opt/ \
+pushd /opt/ \
 && sudo apt-get install linux-headers-generic build-essential git --yes \
 && sudo git clone https://github.com/lwfinger/rtlwifi_new.git --branch kernel_version \
 && sudo chmod -R 777 rtlwifi_new \
